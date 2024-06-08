@@ -1,7 +1,8 @@
-## SQL Queries
-- Query 1: Retrieve employee names
-- Query 2: Calculate total sales
-### Query 1: Retrieve employee names {#query1}
+# SQL Queries
+## Question 1: Is there a relationship between media type and sales?
+
+```sql
+-- SQL code for Question 1
     
 /*Question 1: IS there a Relationship between media type and sales?*/
 
@@ -12,6 +13,7 @@ JOIN InvoiceLine invl ON invl.TrackId = tr.TrackId
 GROUP BY 1, 2
 ORDER BY 3 DESC ;
 
+-- SQL code for Question 2
 
 /*Question 2: What Percentages of Albums according to Sales? */
 /*Categorizing albums according to sales*/
