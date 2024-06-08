@@ -1,3 +1,8 @@
+## SQL Queries
+- Query 1: Retrieve employee names
+- Query 2: Calculate total sales
+### Query 1: Retrieve employee names {#query1}
+    
 /*Question 1: IS there a Relationship between media type and sales?*/
 
 SELECT m.MediaTypeId, m.Name, COUNT(invl.InvoiceId) Number_of_Invoices
