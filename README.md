@@ -1,3 +1,7 @@
+**README.md**
+
+```markdown
+
 # Chinook Database Analysis
 
 ## Introduction
@@ -9,5 +13,8 @@ The schema for the Chinook Database is provided below.The columns that link tabl
 
 ## Project Details
 ### Question 1: Is there a relationship between media type and sales?
-To link to Query 1: Retrieve employee names
+
+**SQL Code:** [Link to SQL file](queries.md#question-1-is-there-a-relationship-between-media-type-and-sales)
+## Question2:
+**SQL Code:** [Link to SQL file](queries.md#question-2-what-percentages-of-albums-according-to-sales)
 
