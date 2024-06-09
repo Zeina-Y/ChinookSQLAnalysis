@@ -10,7 +10,7 @@ The schema for the Chinook Database is provided below.The columns that link tabl
 ## Project Details
 ### Question 1: Is there a relationship between media type and sales?
 
-**SQL Code:** [Link to SQL file](queries.md#question-1-is-there-a-relationship-between-media-type-and-sales)
+**SQL Code:** [Link to SQL file](SQL_Project#L10)
 ## Question2:
 **SQL Code:** [Link to SQL file](queries.md#question-2-what-percentages-of-albums-according-to-sales)
 
