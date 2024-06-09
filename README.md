@@ -1,6 +1,3 @@
-
-```markdown
-
 # Chinook Database Analysis
 
 ## Introduction
