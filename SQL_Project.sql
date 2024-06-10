@@ -1,10 +1,7 @@
-# SQL Queries
-## Question 1: Is there a relationship between media type and sales?
 
-```sql
--- SQL code for Question 1
-    
 /*Question 1: IS there a Relationship between media type and sales?*/
+/*This query retrieves the count of invoices for each media type.*/
+/* It joins the MediaType, Track, and InvoiceLine tables to get the required data.*/
 
 SELECT m.MediaTypeId, m.Name, COUNT(invl.InvoiceId) Number_of_Invoices
 FROM MediaType m
@@ -13,10 +10,11 @@ JOIN InvoiceLine invl ON invl.TrackId = tr.TrackId
 GROUP BY 1, 2
 ORDER BY 3 DESC ;
 
--- SQL code for Question 2
 
 /*Question 2: What Percentages of Albums according to Sales? */
-/*Categorizing albums according to sales*/
+/*This query categorizes albums into high, mid, and low sales based on the amount spent.*/
+/*It calculates the total amount spent on each album and then assigns a category based on the amount.*/
+
 SELECT AlbumId, CASE WHEN AmountSpent > 14 THEN 'High'
     WHEN AmountSpent <= 14 AND AmountSpent > 7 THEN 'Mid'
     ELSE 'Low' END AS Sale_cat
@@ -28,9 +26,10 @@ GROUP BY 1
 ORDER BY 2 DESC) sales_album ;
 
 
-/*Question3: What are general trends in genres for top 5 countries in invoices number?*/
+/*Question 3: What are general trends in genres for the top 5 countries in invoice numbers?*/
+/*This query identifies the top 3 genres in the top 5 countries by invoice number.*/
+/*It uses CTEs to first find the top 5 countries and then to rank genres within those countries.*/
 
-/*Selecting Top 5 countries acc to invoices */
 WITH top_country AS ( SELECT c.Country, COUNT(inv.InvoiceId)
 FROM Customer c
 JOIN Invoice inv
@@ -55,7 +54,9 @@ HAVING invoice_rank = 1 OR invoice_rank = 2 OR invoice_rank = 3
 ORDER BY 1, 3 DESC;
 
 
-/*Question4: Is there a Relationship between a customer being in a company and sales?*/
+/*Question 4: Is there a Relationship between a customer being in a company and sales?*/
+/*This query examines the average invoice total for customers who are associated with a company versus those who are not.*/
+/*It categorizes customers based on whether the company field is null and then calculates the average total.*/
 
 SELECT t1.Company_status, AVG(inv.Total)
 FROM Invoice inv
